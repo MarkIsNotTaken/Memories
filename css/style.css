@@ -1,0 +1,14 @@
+.box {
+	display: -webkit-flex;
+	display: inline-flex;
+	width: 200px;
+	height: 200px;
+	background-color: purple;
+	border: solid 2px;
+	border-radius: 20px;
+	margin: 40px;
+}
+
+header {
+	position: relative;
+}
