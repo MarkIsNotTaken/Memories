@@ -12,8 +12,7 @@
 	transition: all 1s;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
-	margin-left: 90px;
-	background-image: repeating-radial-gradient(circle, blue, black)
+	background-image: repeating-radial-gradient(circle, blue, black);
 }
 
 #back1, #back2, #back3 ,#back4 ,#back5 ,#back6 ,#back7 ,#back8 {

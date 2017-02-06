@@ -62,5 +62,3 @@ document.getElementById("box8").onclick = function (){
 	var div = document.getElementById("box8");
 	div.style.transform = "rotateY(180deg)";
 }
-Contact GitHub API Training Shop Blog About
-© 2017 GitHub, Inc. Terms Privacy Security Status Help
