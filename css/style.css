@@ -1,16 +1,12 @@
 #box1, #box2, #box3 ,#box4 ,#box5 ,#box6 ,#box7 ,#box8 {
-	-webkit-display: inline-flex;
 	display: inline-flex;
 	width: 200px;
 	height: 320px;
 	border: solid black;
 	border-radius: 4px; 
 	margin: 40px;
-	-webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
-	-webkit-transition: all 1s;
 	transition: all 1s;
-	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 	background-image: repeating-radial-gradient(circle, blue, black);
 }
@@ -23,7 +19,6 @@
 	background-color: white;
 	border: solid black;
 	border-radius: 4px; 
-	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 	transform: rotateY(180deg)
 
