@@ -6,7 +6,7 @@
 	border-radius: 4px; 
 	margin: 40px;
 	transform-style: preserve-3d;
-	transition: all 1s;
+	transition: all 0.5s;
 	backface-visibility: hidden;
 	background-image: repeating-radial-gradient(circle, blue, black);
 }

@@ -23,66 +23,78 @@ document.getElementById("pic6").src = image[5];
 document.getElementById("pic7").src = image[6];	
 document.getElementById("pic8").src = image[7];
 
-var clicked = [];
-var firstp = clicked[0];
-var secondp = clicked[1];
-var clicks = 0;
+var clicked = ["1"];
 
 document.getElementById("box1").onclick = function (){
 	var div = document.getElementById("box1");
 	div.style.transform = "rotateY(180deg)";
-	clicked.push(document.getElementById("pic1").src);
+	clicked.push("document.getElementById('pic1')");
 }
 
 document.getElementById("box2").onclick = function (){
 	var div = document.getElementById("box2");
 	div.style.transform = "rotateY(180deg)";
-	clicked.push(document.getElementById("pic2").src);
+	clicked.push("document.getElementById('pic2')");
 	
 }
 
 document.getElementById("box3").onclick = function (){
 	var div = document.getElementById("box3");
 	div.style.transform = "rotateY(180deg)";
-	clicked.push(document.getElementById("pic3").src);
+	clicked.push(document.getElementById("pic3"));
 }
 
 document.getElementById("box4").onclick = function (){
 	var div = document.getElementById("box4");
 	div.style.transform = "rotateY(180deg)";
-	clicked.push(document.getElementById("pic4").src);
+	clicked.push(document.getElementById("pic4"));
 }
 
 document.getElementById("box5").onclick = function (){
 	var div = document.getElementById("box5");
 	div.style.transform = "rotateY(180deg)";
-	clicked.push(document.getElementById("pic5").src);
+	clicked.push(document.getElementById("pic5"));
 }
 
 document.getElementById("box6").onclick = function (){
 	var div = document.getElementById("box6");
 	div.style.transform = "rotateY(180deg)";
-	clicked.push(document.getElementById("pic6").src);
-	console.log(clicks);
+	clicked.push(document.getElementById("pic6"));
 }
 
 document.getElementById("box7").onclick = function (){
 	var div = document.getElementById("box7");
 	div.style.transform = "rotateY(180deg)";
-	clicked.push(document.getElementById("pic7").src);
+	clicked.push(document.getElementById("pic7"));
 }
 
 document.getElementById("box8").onclick = function (){
 	var div = document.getElementById("box8");
 	div.style.transform = "rotateY(180deg)";
-	clicked.push(document.getElementById("pic8").src);
+	clicked.push(document.getElementById("pic8"));
 }
 
-function donut(){
-if(clicked.length == 2 && firstp !== secondp){
+function clicks(){
+if(clicked[0].src !== clicked[1].src && clicked[0].src !== null || clicked[1].src !== null){
 	document.getElementById("box1").style.transform = "rotateY(0deg)";
 	document.getElementById("box2").style.transform = "rotateY(0deg)";
+	document.getElementById("box3").style.transform = "rotateY(0deg)";
+	document.getElementById("box4").style.transform = "rotateY(0deg)";
+	document.getElementById("box5").style.transform = "rotateY(0deg)";
+	document.getElementById("box6").style.transform = "rotateY(0deg)";
+	document.getElementById("box7").style.transform = "rotateY(0deg)";
+	document.getElementById("box8").style.transform = "rotateY(0deg)";
+	clicked.splice(0, 2);
 	}
 }
 
-setInterval(donut, 1000);
+function clear(){
+	if(clicked[0] == clicked[1]){
+		document.getElementById("box1").style.opacity = 0;
+		document.getElementById("box2").style.opacity = 0;
+	}
+}
+
+var int = setInterval(clicks, 2000);
+setInterval(clear, 0000);
+setTimeout(int, 2000);
