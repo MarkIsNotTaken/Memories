@@ -23,18 +23,18 @@ document.getElementById("pic6").src = image[5];
 document.getElementById("pic7").src = image[6];	
 document.getElementById("pic8").src = image[7];
 
-var clicked = ["1"];
+var clicked = [];
 
 document.getElementById("box1").onclick = function (){
 	var div = document.getElementById("box1");
 	div.style.transform = "rotateY(180deg)";
-	clicked.push("document.getElementById('pic1')");
+	clicked.push(document.getElementById("pic1"));
 }
 
 document.getElementById("box2").onclick = function (){
 	var div = document.getElementById("box2");
 	div.style.transform = "rotateY(180deg)";
-	clicked.push("document.getElementById('pic2')");
+	clicked.push(document.getElementById("pic2"));
 	
 }
 
@@ -88,13 +88,23 @@ if(clicked[0].src !== clicked[1].src && clicked[0].src !== null || clicked[1].sr
 	}
 }
 
+var points = 0;
+
 function clear(){
-	if(clicked[0] == clicked[1]){
-		document.getElementById("box1").style.opacity = 0;
-		document.getElementById("box2").style.opacity = 0;
+	if(clicked[0].src == clicked[1].src && clicked[0].src !== null && clicked[1].src !== null){
+		var node1 = clicked[0].parentNode;
+		var node2 = clicked[1].parentNode;
+		node1.parentNode.style.opacity = 0;
+		node2.parentNode.style.opacity = 0;
+		points++;
 	}
+}
+
+function score(){
+	document.getElementById("points").innerHTML = "Score = " + points;
 }
 
 var int = setInterval(clicks, 2000);
 setInterval(clear, 0000);
+setInterval(score, 1000)
 setTimeout(int, 2000);
